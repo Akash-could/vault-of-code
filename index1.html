@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vault of Codes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f9f9f9;
+      --text: #333;
+      --primary: #4a90e2;
+      --card-bg: #fff;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--primary);
+      color: white;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    #menuToggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    section {
+      padding: 4rem 2rem;
+    }
+
+    .hero {
+      text-align: center;
+      background: linear-gradient(120deg, #4a90e2, #3f51b5);
+      color: white;
+    }
+
+    .hero .cta {
+      background: white;
+      color: var(--primary);
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      padding: 1.5rem;
+      transition: transform 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card button {
+      margin-top: 1rem;
+      padding: 8px 16px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    #contact {
+      text-align: center;
+    }
+
+    #contact a {
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    #darkModeBtn {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      padding: 12px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      #menuToggle {
+        display: block;
+      }
+      nav {
+        display: none;
+        flex-direction: column;
+        background: var(--primary);
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 1rem;
+      }
+      nav.show {
+        display: flex;
+      }
+    }
+
+    .dark-mode {
+      --bg: #121212;
+      --text: #e0e0e0;
+      --card-bg: #1f1f1f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">Vault of Codes</div>
+    <button id="menuToggle">☰</button>
+    <nav id="navMenu">
+      <a href="#">Home</a>
+      <a href="#internships">Internships</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Welcome to Vault of Codes</h1>
+        <p>Unlock your potential through real-world internships and learning experiences.</p>
+        <a href="#internships"><button>Explore Internships</button></a>
+      </div>
+    </section>
+    <section class="why-us" id="why-us">
+      <h2>Why Choose Vault of Codes?</h2>
+      <div class="features">
+        <div class="feature">
+          <h3>Real-world Experience</h3>
+          <p>Work on live projects and gain industry-level skills.</p>
+        </div>
+        <div class="feature">
+          <h3>Flexible Learning</h3>
+          <p>Learn at your own pace with full-time or part-time internships.</p>
+        </div>
+        <div class="feature">
+          <h3>Certification</h3>
+          <p>Get certified for every internship you complete successfully.</p>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials" id="testimonials">
+      <h2>What Our Interns Say</h2>
+      <div class="testimonial">
+        <p>“Vault of Codes gave me hands-on experience that books never could. The mentors were amazing!”</p>
+        <strong>- Aayush, Web Dev Intern</strong>
+      </div>
+      <div class="testimonial">
+        <p>“The projects were real and challenging. I felt like a true developer.”</p>
+        <strong>- Priya, App Dev Intern</strong>
+      </div>
+    </section>
+    <footer>
+  <div class="footer-content">
+    <p>&copy; 2025 Vault of Codes. All rights reserved.</p>
+    <p><a href="#contact">Contact Us</a> | <a href="apply.html">Apply</a></p>
+  </div>
+</footer>
+
+
+
+    <section id="internships">
+      <h2 style="text-align:center">Our Internships</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Web Development</h3>
+          <p>Duration: 1 Month<br>Stipend: ₹499</p>
+          <p>Duration: 2 Month<br>Stipend: ₹899</p>
+          <a href="apply.html"><button>Apply Now</button></a>
+        </div>
+        <div class="card">
+          <h3>App Development</h3>
+          <p>Duration: 2 Months<br>Stipend: ₹899</p>
+          <a href="apply.html"><button>Apply Now</button></a>
+        </div>
+        <div class="card">
+          <h3>Java Programming</h3>
+          <p>Duration: 1 Month<br>Stipend: ₹499</p>
+          <a href="apply.html"><button>Apply Now</button></a>
+        </div>
+        <div class="card">
+          <h3>Python Programming</h3>
+          <p>Duration: 1 Month<br>Stipend: ₹499</p>
+          <a href="apply.html"><button>Apply Now</button></a>
+        </div>
+        <div class="card">
+          <h3>AIML</h3>
+          <p>Duration: 1 Month<br>Stipend: ₹499</p>
+          <p>Duration: 2 Month<br>Stipend: ₹899</p>
+          <a href="apply.html"><button>Apply Now</button></a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:support@vaultofcodes.com">support@vaultofcodes.com</a></p>
+      <p>Phone: +91-9876543210</p>
+      <p>Instagram: <a href="https://instagram.com/vaultofcodes" target="_blank">@vaultofcodes</a></p>
+    </section>
+  </main>
+
+  <button id="darkModeBtn">🌙</button>
+
+  <script>
+    document.getElementById("menuToggle").onclick = () => {
+      document.getElementById("navMenu").classList.toggle("show");
+    };
+
+    document.getElementById("darkModeBtn").onclick = () => {
+      document.body.classList.toggle("dark-mode");
+    };
+  </script>
+</body>
+</html>
